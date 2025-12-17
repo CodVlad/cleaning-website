@@ -2822,7 +2822,7 @@ select {
 
   .hero-buttons {
     flex-direction: column !important;
-    gap: 8px !important;
+    gap: 12px !important;
     width: 90% !important;
     max-width: 90% !important;
     margin: 0 auto !important;
@@ -2834,11 +2834,11 @@ select {
   .header-btn-primary,
   .header-btn-secondary {
     width: 100% !important;
-    font-size: 10px !important;
-    padding: 6px 14px !important;
-    min-height: 20px !important;
+    font-size: 16px !important;
+    padding: 14px 24px !important;
+    min-height: 50px !important;
     margin: 0 !important;
-    border-radius: 6px !important;
+    border-radius: 12px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
