@@ -379,11 +379,12 @@
   .staggered-menu-header.sm-header-scrolled {
     background: #ffffff !important;
     border-radius: 50px !important;
-    margin: 8px 12px !important;
+    margin: 0 !important;
     width: calc(100% - 24px) !important;
-    left: 12px !important;
-    right: 12px !important;
-    top: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    top: 8px !important;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1) !important;
   }
 
@@ -465,10 +466,12 @@
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
     border-radius: 50px !important;
-    margin: 8px 12px !important;
+    margin: 0 !important;
     width: calc(100% - 24px) !important;
-    left: 12px !important;
-    right: 12px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    top: 8px !important;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1) !important;
   }
 
