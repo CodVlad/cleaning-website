@@ -1,0 +1,96 @@
+.easyclean-logo {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.easyclean-logo:hover {
+  transform: scale(1.02);
+}
+
+.logo-easy {
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.logo-clean {
+  color: #ffd700;
+  transition: color 0.3s ease;
+}
+
+/* Home page desktop navbar - logo all yellow */
+.image-container .logo .logo-easy,
+.image-container .logo .logo-clean {
+  color: #ffd700;
+}
+
+/* Footer specific styles - all yellow */
+.footer-logo .easyclean-logo {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.footer-logo .logo-easy,
+.footer-logo .logo-clean {
+  color: #ffd700;
+}
+
+/* Navbar specific styles */
+.logo .easyclean-logo,
+.Nav-Mob-logo .easyclean-logo,
+.sm-logo .easyclean-logo {
+  font-size: 26px;
+  margin-bottom: 0;
+}
+
+/* Mobile & Tablet - Logo all yellow on hero (before scroll) */
+@media (max-width: 1024px) {
+  .sm-logo .logo-easy,
+  .sm-logo .logo-clean {
+    color: #ffd700;
+    transition: color 0.3s ease;
+  }
+
+  /* When scrolled - Easy becomes black, Clean stays yellow */
+  .sm-header-scrolled .sm-logo .logo-easy {
+    color: #1a1a1a;
+  }
+
+  .sm-header-scrolled .sm-logo .logo-clean {
+    color: #ffd700;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .easyclean-logo {
+    font-size: 22px;
+  }
+
+  .footer-logo .easyclean-logo {
+    font-size: 20px;
+  }
+
+  .logo .easyclean-logo,
+  .Nav-Mob-logo .easyclean-logo,
+  .sm-logo .easyclean-logo {
+    font-size: 20px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .easyclean-logo {
+    font-size: 24px;
+  }
+
+  .sm-logo .easyclean-logo {
+    font-size: 22px;
+  }
+}
