@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faArrowRight, faHome, faBuilding, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './Pret.css';
 
 export default function Pret(){

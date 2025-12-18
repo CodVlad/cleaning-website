@@ -1,16 +1,9 @@
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-import imageASwindow from "../assets/imageASwindow.png";
-import imageASchimic from "../assets/imageASchimic.png";
-import image4 from "../assets/image4.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faWindowMinimize, 
-  faVirusSlash, 
-  faCity, 
   faCheck, 
   faSprayCanSparkles, 
-  faTag, 
   faArrowRight, 
   faPhone,
   faStar,
@@ -19,11 +12,7 @@ import {
   faCheckCircle,
   faUsers,
   faAward,
-  faListCheck,
-  faArrowDown,
-  faQuestionCircle,
-  faImages,
-  faBroom
+  faArrowDown
 } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import { useState } from 'react';

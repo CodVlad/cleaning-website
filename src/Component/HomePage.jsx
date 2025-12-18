@@ -148,7 +148,7 @@ export default function HomePage(){
 
              <div className="OurService">
                 <h1>
-                    Range Of Professional<br />
+                    <span className="services-title-first">Range Of Professional</span><br />
                     <span className="services-title-highlight">Cleaning Solutions</span>
                 </h1>
                 <Link to="/servicii" className="view-all-services-btn">View all Service</Link>

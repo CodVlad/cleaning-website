@@ -1170,7 +1170,7 @@ body {
 }
 
 .view-all-services-btn {
-  display: inline-flex !important;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -1183,8 +1183,8 @@ body {
   border-radius: 30px;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.3);
-  white-space: nowrap !important;
-  flex-shrink: 0 !important;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .view-all-services-btn:hover {
@@ -2753,30 +2753,44 @@ select {
      HERO SECTION
      ====================== */
   .image-container {
-    min-height: 75vh !important;
-    max-height: 85vh !important;
+    position: relative !important;
+    min-height: 70vh !important;
+    max-height: 75vh !important;
     margin: 0 !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     padding: 0 !important;
+    overflow: hidden !important;
   }
 
   .header-foto {
-    height: 75vh !important;
-    min-height: 550px !important;
-    max-height: 750px !important;
+    height: 70vh !important;
+    min-height: 70vh !important;
+    max-height: 75vh !important;
     width: 100% !important;
-    filter: brightness(0.6) !important;
+    filter: brightness(0.5) !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 0 !important;
   }
 
   .overlay {
-    padding: 35px 16px 30px !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 50px 20px 40px !important;
     align-items: center !important;
     text-align: center !important;
     justify-content: center !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 14px !important;
+    gap: 20px !important;
+    z-index: 1 !important;
+    box-sizing: border-box !important;
   }
 
   .overlay::before {
@@ -2786,18 +2800,17 @@ select {
   .text {
     width: 100% !important;
     max-width: 100% !important;
-    font-size: 24px !important;
+    font-size: 28px !important;
     font-weight: 700 !important;
-    line-height: 1.3 !important;
-    margin-bottom: 10px !important;
-    padding: 0 !important;
-    padding-left: 0 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+    padding: 0 10px !important;
     text-align: center !important;
     margin-left: 0 !important;
     margin-top: 0 !important;
     color: white !important;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5) !important;
-    letter-spacing: -0.3px !important;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6) !important;
+    letter-spacing: -0.5px !important;
   }
 
   .text::before {
@@ -2807,24 +2820,23 @@ select {
   .text-p {
     width: 100% !important;
     max-width: 100% !important;
-    font-size: 15px !important;
+    font-size: 16px !important;
     line-height: 1.5 !important;
-    margin-bottom: 12px !important;
-    padding: 0 !important;
-    padding-left: 0 !important;
+    margin-bottom: 16px !important;
+    padding: 0 16px !important;
     text-align: center !important;
     margin-left: 0 !important;
     margin-top: 0 !important;
     color: rgba(255, 255, 255, 0.95) !important;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4) !important;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5) !important;
     font-weight: 400 !important;
   }
 
   .hero-buttons {
     flex-direction: column !important;
     gap: 12px !important;
-    width: 90% !important;
-    max-width: 90% !important;
+    width: 100% !important;
+    max-width: 320px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     align-items: stretch !important;
@@ -2834,9 +2846,9 @@ select {
   .header-btn-primary,
   .header-btn-secondary {
     width: 100% !important;
-    font-size: 16px !important;
+    font-size: 15px !important;
     padding: 14px 24px !important;
-    min-height: 50px !important;
+    min-height: 48px !important;
     margin: 0 !important;
     border-radius: 12px !important;
     display: flex !important;
@@ -2845,51 +2857,46 @@ select {
     font-weight: 600 !important;
     text-decoration: none !important;
     transition: all 0.3s ease !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2) !important;
   }
 
   /* Hero Rating */
   .hero-rating {
-    margin: 0 auto 8px !important;
-    padding: 5px 10px !important;
-    font-size: 10px !important;
+    margin: 0 auto 12px !important;
+    padding: 8px 16px !important;
+    font-size: 13px !important;
     width: auto !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 4px !important;
-    background: rgba(255, 255, 255, 0.15) !important;
+    gap: 6px !important;
+    background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px) !important;
-    border-radius: 16px !important;
+    border-radius: 20px !important;
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15) !important;
   }
 
   .rating-stars {
     display: flex !important;
-    gap: 2px !important;
-    font-size: 10px !important;
+    gap: 3px !important;
+    font-size: 14px !important;
     color: #ffd700 !important;
   }
 
   .rating-text {
-    font-size: 11px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
     color: white !important;
   }
 
   .rating-source {
-    font-size: 9px !important;
+    font-size: 12px !important;
     color: rgba(255, 255, 255, 0.9) !important;
   }
 
   /* Hero Stats */
   .hero-stats {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: 6px !important;
-    margin: 10px auto 0 !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
+    display: none !important;
   }
 
   .hero-stat-item {
@@ -2942,6 +2949,11 @@ select {
     color: #1a1a1a !important;
   }
 
+  .services-title-first {
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
   .services-title-highlight {
     display: block !important;
     margin-top: 4px !important;
@@ -2965,48 +2977,62 @@ select {
   }
 
   .services-cards-albadoe {
-    padding: 0 16px 30px !important;
+    padding: 0 8px 30px !important;
     margin-top: 0 !important;
   }
 
   .services-cards-container {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    gap: 20px !important;
     width: 100% !important;
     max-width: 100% !important;
     padding: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .service-card-albadoe {
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 !important;
+    margin: 0 8px !important;
+    padding: 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
   }
 
   .service-card-albadoe-image {
-    height: 180px !important;
+    height: 200px !important;
     width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
   }
 
   .service-card-albadoe-image img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+    border-radius: 0 !important;
+    display: block !important;
   }
 
   .service-card-albadoe-category {
-    padding: 12px 18px 0 !important;
-    font-size: 10px !important;
+    padding: 14px 18px 0 !important;
+    font-size: 11px !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
-    color: #666 !important;
+    color: #ffd700 !important;
+    margin: 0 !important;
   }
 
   .service-card-albadoe-title {
     font-size: 18px !important;
-    padding: 10px 18px 0 !important;
+    padding: 8px 18px 0 !important;
     line-height: 1.4 !important;
     font-weight: 700 !important;
     margin: 0 !important;
@@ -3019,6 +3045,7 @@ select {
     line-height: 1.6 !important;
     margin: 0 !important;
     color: #666 !important;
+    flex-grow: 1 !important;
   }
 
   /* ======================
@@ -3193,29 +3220,34 @@ select {
   .stats-container {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    gap: 20px !important;
     width: 100% !important;
     max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .stats-card {
     width: 100% !important;
+    max-width: 100% !important;
     text-align: center !important;
-  }
-
-  .stats-card {
-    padding: 24px 18px !important;
-    border-radius: 14px !important;
-    text-align: center !important;
+    padding: 28px 20px !important;
+    border-radius: 16px !important;
     background: #ffffff !important;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08) !important;
     border: 1px solid #f0f0f0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .stats-icon-wrapper {
     width: 60px !important;
     height: 60px !important;
-    margin: 0 auto 16px !important;
+    margin: 0 auto 18px !important;
+    flex-shrink: 0 !important;
   }
 
   .stats-icon {
@@ -3223,21 +3255,24 @@ select {
   }
 
   .stats-number {
-    font-size: 36px !important;
-    margin: 8px 0 4px !important;
+    font-size: 38px !important;
+    margin: 0 0 4px 0 !important;
     font-weight: 800 !important;
     color: #1a1a1a !important;
+    line-height: 1.2 !important;
   }
 
   .stats-unit {
     font-size: 28px !important;
     font-weight: 800 !important;
     color: #1a1a1a !important;
+    display: inline-block !important;
+    margin-left: 2px !important;
   }
 
   .stats-label {
     font-size: 14px !important;
-    margin: 8px 0 12px !important;
+    margin: 8px 0 14px 0 !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
@@ -3246,24 +3281,26 @@ select {
 
   .stats-divider {
     width: 50px !important;
-    margin: 12px auto !important;
+    margin: 0 auto 16px !important;
     height: 2px !important;
     background: #ffd700 !important;
+    flex-shrink: 0 !important;
   }
 
   .stats-description {
     font-size: 13px !important;
     line-height: 1.6 !important;
-    margin: 12px 0 16px !important;
+    margin: 0 0 18px 0 !important;
     color: #666 !important;
+    text-align: center !important;
   }
 
   .stats-link {
-    padding: 12px 20px !important;
+    padding: 12px 24px !important;
     font-size: 13px !important;
-    width: 100% !important;
+    width: auto !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     justify-content: center !important;
     border-radius: 12px !important;
     font-weight: 600 !important;
@@ -3271,6 +3308,7 @@ select {
     text-decoration: none !important;
     display: inline-flex !important;
     align-items: center !important;
+    gap: 8px !important;
   }
 
   .stats-badge {
@@ -3278,6 +3316,36 @@ select {
     right: 12px !important;
     padding: 5px 10px !important;
     font-size: 9px !important;
+  }
+
+  .stats-card-featured {
+    background: linear-gradient(135deg, #ffd700 0%, #fac700 100%) !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0px 8px 25px rgba(255, 215, 0, 0.3) !important;
+  }
+
+  .stats-card-featured .stats-number,
+  .stats-card-featured .stats-unit,
+  .stats-card-featured .stats-label {
+    color: #1a1a1a !important;
+  }
+
+  .stats-card-featured .stats-divider {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #1a1a1a,
+      transparent
+    ) !important;
+  }
+
+  .stats-card-featured .stats-description {
+    color: rgba(26, 26, 26, 0.8) !important;
+  }
+
+  .stats-card-featured .stats-link {
+    background: #1a1a1a !important;
+    color: #ffd700 !important;
   }
 
   /* ======================
@@ -3769,166 +3837,127 @@ select {
     height: 220px !important;
   }
 
-  /* Photo Scatter - Layout ca la mobil (vertical) */
+  /* Photo Scatter - 6 poze în cerc cu titlu și buton în centru */
   .photo-scatter-section {
-    padding: 40px 16px !important;
-    min-height: auto !important;
+    padding: 50px 20px !important;
+    min-height: 600px !important;
   }
 
   .photo-grid-container {
-    min-height: auto !important;
-    position: relative !important;
-    padding: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
+    min-height: 550px !important;
   }
 
   .photo-scatter-container {
     position: relative !important;
     width: 100% !important;
-    height: auto !important;
-    display: contents !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    z-index: 1 !important;
+    max-width: 600px !important;
+    height: 500px !important;
+    margin: 0 auto !important;
   }
 
-  /* Image 1 - First */
-  .photo-scatter-item:nth-child(1) {
-    order: 1 !important;
-    width: 100% !important;
-    height: 220px !important;
-    position: relative !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    border-radius: 18px !important;
+  /* Toate fotografiile - dimensiune uniformă */
+  .photo-scatter-item {
+    position: absolute !important;
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 12px !important;
     overflow: hidden !important;
-    margin-bottom: 22px !important;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  /* Image 2 - Second */
-  .photo-scatter-item:nth-child(2) {
-    order: 2 !important;
-    width: 100% !important;
-    height: 220px !important;
-    position: relative !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    border-radius: 18px !important;
-    overflow: hidden !important;
-    margin-bottom: 30px !important;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  /* Text Block - Third */
-  .photo-center-text {
-    order: 3 !important;
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    z-index: 2 !important;
-    text-align: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 0 20px 0 !important;
-    pointer-events: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-
-  .photo-center-text h1,
-  .photo-center-title {
-    order: 1 !important;
-    font-size: 28px !important;
-    font-weight: 700 !important;
-    color: #1a1a1a !important;
-    text-align: center !important;
-    margin: 0 auto 20px !important;
-    line-height: 1.25 !important;
-    max-width: 90% !important;
-    padding: 0 !important;
-    text-shadow: none !important;
-  }
-
-  /* Button */
-  .photo-quote-btn,
-  .photo-center-text .cta-button-albadoe {
-    order: 2 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 16px 24px !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    min-height: 52px !important;
-    margin: 0 auto 30px !important;
-    justify-content: center !important;
-    border-radius: 16px !important;
-    text-decoration: none !important;
-    display: flex !important;
-    align-items: center !important;
-    transition: all 0.3s ease !important;
-    background: linear-gradient(135deg, #ffd700, #fac700) !important;
-    color: #1a1a1a !important;
-    box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.3) !important;
-  }
-
-  /* Image 3 - Fifth */
-  .photo-scatter-item:nth-child(3) {
-    order: 5 !important;
-    width: 100% !important;
-    height: 220px !important;
-    position: relative !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    border-radius: 18px !important;
-    overflow: hidden !important;
-    margin-bottom: 22px !important;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  /* Image 4 - Sixth */
-  .photo-scatter-item:nth-child(4) {
-    order: 6 !important;
-    width: 100% !important;
-    height: 220px !important;
-    position: relative !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    border-radius: 18px !important;
-    overflow: hidden !important;
-    margin-bottom: 0 !important;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  /* Hide remaining images */
-  .photo-scatter-item:nth-child(n + 5) {
-    display: none !important;
-  }
-
-  .photo-scatter-item:hover {
-    transform: scale(1.02) !important;
   }
 
   .photo-scatter-item img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+  }
+
+  /* Foto 1 – sus centru */
+  .photo-scatter-item:nth-child(1) {
+    top: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Foto 2 – dreapta sus */
+  .photo-scatter-item:nth-child(2) {
+    top: 25% !important;
+    right: 5% !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  /* Foto 3 – dreapta jos */
+  .photo-scatter-item:nth-child(3) {
+    bottom: 25% !important;
+    right: 5% !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  /* Foto 4 – jos centru */
+  .photo-scatter-item:nth-child(4) {
+    bottom: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Foto 5 – stânga jos */
+  .photo-scatter-item:nth-child(5) {
+    bottom: 25% !important;
+    left: 5% !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  /* Foto 6 – stânga sus */
+  .photo-scatter-item:nth-child(6) {
+    top: 25% !important;
+    left: 5% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  /* Ascunde fotografiile 7+ */
+  .photo-scatter-item:nth-child(n + 7) {
+    display: none !important;
+  }
+
+  /* Titlu și buton în centru */
+  .photo-center-text {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: 280px !important;
+    width: 60% !important;
+    text-align: center !important;
+    z-index: 10 !important;
+    padding: 20px !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .photo-center-title {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 14px !important;
+    font-weight: 700 !important;
+    color: #1a1a2e !important;
+  }
+
+  .photo-center-text .cta-button-albadoe {
+    padding: 12px 22px !important;
+    font-size: 13px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
   }
 
   /* How We Work - 1 pe rând */
