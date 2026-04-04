@@ -1,25 +1,18 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { 
-  faXmark, 
   faChevronDown, 
   faHome, 
   faUser, 
   faBroom, 
   faTag, 
-  faImages, 
-  faEnvelope, 
-  faQuestionCircle, 
-  faStar, 
-  faNewspaper 
+  faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
 import EasyCleanLogo from "./EasyCleanLogo";
 import StaggeredMenu from "./StaggeredMenu";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isOtherOpen, setIsOtherOpen] = useState(false);
   const otherDropdownRef = useRef(null);
@@ -51,7 +44,7 @@ export default function Navbar() {
   }, [isOtherOpen]);
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       {/* NAVBAR DESKTOP */}
       <div className="navbar-start hidden lg:block">
         <Link to="/" className="logo-link">
@@ -99,10 +92,6 @@ export default function Navbar() {
                     <Link to="/contacte" className="nav-dropdown-item-card" onClick={() => setIsOtherOpen(false)}>
                       <FontAwesomeIcon icon={faEnvelope} className="nav-dropdown-icon" />
                       <span className="nav-dropdown-text">Contact</span>
-                    </Link>
-                    <Link to="/newslist" className="nav-dropdown-item-card" onClick={() => setIsOtherOpen(false)}>
-                      <FontAwesomeIcon icon={faNewspaper} className="nav-dropdown-icon" />
-                      <span className="nav-dropdown-text">Blog</span>
                     </Link>
                   </div>
                 </div>

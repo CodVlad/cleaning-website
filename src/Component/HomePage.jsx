@@ -1,7 +1,7 @@
 import NavBar from "./NavBar";
 import './HomePage.css';
 import image from "../assets/image.png"; 
-import imageAbout from "../assets/imageAbout.png"
+import imageAbout from "../assets/imageAbout.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faArrowRight, faCheck, faUsers, faChartLine, faUserCheck, faStar, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
 import 'animate.css';
@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import Footer from "./Footer";
 import Lenta from "./lenta";
+import PhotoHappySpaceSection from "./PhotoHappySpaceSection";
 
 
 
@@ -19,28 +20,6 @@ export default function HomePage(){
   const statsRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [statsAnimated, setStatsAnimated] = useState(false);
-
-  // Photo images around text
-  const photoImages = [
-    "https://cascadecleaninguk.com/wp-content/uploads/elementor/thumbs/2150454561-qwwih6im24bwg6318ttqs8vx8hiwmyqpl9pqsqad0w.jpg",
-    "https://www.pristinehome.com.au/wp-content/uploads/2018/11/Benefits-of-Having-Your-Home-Cleaned-by-a-Professional-Cleaner.jpg",
-    "https://maidthis.com/wp-content/uploads/sites/15/2020/07/Where-can-I-book-the-finest-Airbnb-cleaning-1.jpg",
-    "https://i0.wp.com/cluttertrucker.com/wp-content/uploads/2023/12/residential-deep-cleaning.png?resize=800%2C600&ssl=1",
-    "https://aksharhousekeeping.co.in/wp-content/uploads/2023/12/professional-cleaning-service-people-working-together-office-1-2.jpg",
-    "https://techsquadteam.com/assets/profile/blogimages/39318fb1795c4074d77aa776cabe3154.png",
-    "https://www.henryford.com/-/media/project/hfhs/henryford/henry-ford-blog/images/mobile-interior-banner-images/2019/02/bucket-of-cleaning-products.jpg",
-    "https://static.wixstatic.com/media/11062b_cbd10367d7414862bb3b683f3556a41b~mv2.jpeg/v1/fill/w_640,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_cbd10367d7414862bb3b683f3556a41b~mv2.jpeg"
-  ];
-
-  // Generate circular positions around center
-  const photoPositions = photoImages.map((_, index) => {
-    const angle = (index / photoImages.length) * 2 * Math.PI;
-    const radius = 550; // Distance from center
-    return {
-      x: Math.cos(angle) * radius,
-      y: Math.sin(angle) * radius
-    };
-  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -176,7 +155,7 @@ export default function HomePage(){
 
                     <Link to="/servicii" className="service-card-albadoe">
                         <div className="service-card-albadoe-image">
-                            <img src="https://gwindor-ciscenje.com.hr/wp-content/uploads/2024/06/gwindor-ciscenje-namjestaja-2-hero-1024x683.jpg" alt="Chemical cleaning" />
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop&q=80" alt="Chemical cleaning" />
                         </div>
                         <div className="service-card-albadoe-category">Chemical</div>
                         <h3 className="service-card-albadoe-title">Chemical Cleaning of Furniture and Carpets</h3>
@@ -402,31 +381,7 @@ export default function HomePage(){
             </div>
 
 
-            <div className="photo-animation-section">
-                <div className="photo-grid-container">
-                    <div className="photo-scatter-container">
-                        {photoImages.map((img, index) => (
-                            <div 
-                                key={`photo-${index}`} 
-                                className="photo-scatter-item"
-                                style={{
-                                    '--photo-x': photoPositions[index].x + 'px',
-                                    '--photo-y': photoPositions[index].y + 'px'
-                                }}
-                            >
-                                <img src={img} alt={`Photo ${index + 1}`} />
-                            </div>
-                        ))}
-                            </div>
-                    <div className="photo-center-text">
-                        <h1>Your Clean Happy <span className="text-highlight">Space Is Just</span> One Click Away</h1>
-                        <Link to="/contacte" className="photo-quote-btn">
-                            Get a Quote
-                            <FontAwesomeIcon icon={faArrowRight} className="photo-quote-btn-icon" />
-                        </Link>
-                    </div>
-                </div>
-             </div>
+            <PhotoHappySpaceSection />
 
              <Footer/>
         </>

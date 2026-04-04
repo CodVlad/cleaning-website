@@ -78,8 +78,8 @@
 .about-hero-images-small {
   display: flex;
   flex-direction: column;
-    gap: 20px;
-  }
+  gap: 20px;
+}
 
 .about-hero-image-small img {
   width: 100%;
@@ -619,122 +619,6 @@
   line-height: 1.5;
 }
 
-/* Photo Animation Section - Same as HomePage */
-.photo-animation-section {
-  position: relative;
-  min-height: 100vh;
-  padding: 200px 20px;
-  overflow: visible;
-  background: transparent;
-}
-
-.photo-grid-container {
-  position: relative;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  min-height: 1500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Photo Container */
-.photo-scatter-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.photo-scatter-item {
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  top: 50%;
-  left: 50%;
-  transform: translate(
-    calc(-50% + var(--photo-x)),
-    calc(-50% + var(--photo-y))
-  );
-  opacity: 1;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.photo-scatter-item:hover {
-  transform: translate(
-    calc(-50% + var(--photo-x)),
-    calc(-50% + var(--photo-y))
-  ) scale(1.1);
-}
-
-.photo-scatter-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Center Text */
-.photo-center-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  text-align: center;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.photo-center-text h1 {
-  font-size: 56px;
-  font-weight: 700;
-  color: #000000;
-  margin: 0;
-  line-height: 1.3;
-  pointer-events: none;
-}
-
-.photo-center-text h1 .text-highlight {
-  color: #FFD700;
-}
-
-.photo-quote-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 30px;
-  padding: 18px 40px;
-  background: linear-gradient(135deg, #FFD700, #FAC700);
-  color: #000000;
-  border: none;
-  border-radius: 30px;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.3);
-}
-
-.photo-quote-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 10px 30px rgba(255, 215, 0, 0.5);
-  background: linear-gradient(135deg, #FAC700, #FFD700);
-}
-
-.photo-quote-btn-icon {
-  transition: transform 0.3s ease;
-}
-
-.photo-quote-btn:hover .photo-quote-btn-icon {
-  transform: translateX(5px);
-}
 
 
 /* ============================================
@@ -990,59 +874,7 @@
     width: 48px !important;
     height: 48px !important;
   }
-
-  /* ======================
-     PHOTO ANIMATION SECTION
-     ====================== */
-  .photo-animation-section {
-    padding: 60px 25px !important;
-  }
-
-  .photo-scatter-container {
-    display: grid !important;
-    grid-template-columns: 1fr 1.5fr 1fr !important;
-    gap: 15px !important;
-  }
-
-  .photo-scatter-item {
-    position: relative !important;
-    transform: none !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .photo-scatter-item img {
-    width: 100% !important;
-    height: 160px !important;
-    object-fit: cover !important;
-    border-radius: 14px !important;
-  }
-
-  .photo-center-text {
-    grid-column: 2 !important;
-    grid-row: 1 / 3 !important;
-    position: relative !important;
-    transform: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .photo-center-text h1 {
-    font-size: 26px !important;
-    line-height: 1.25 !important;
-    margin-bottom: 20px !important;
-  }
-
-  .photo-quote-btn {
-    padding: 14px 28px !important;
-    font-size: 15px !important;
-    border-radius: 12px !important;
-  }
 }
-
 
 /* ============================================
    TABLET LANDSCAPE - 769px to 1024px
@@ -1191,23 +1023,6 @@
   /* ======================
      PHOTO ANIMATION SECTION
      ====================== */
-  .photo-animation-section {
-    padding: 80px 40px !important;
-  }
-
-  .photo-scatter-item img {
-    height: 200px !important;
-    border-radius: 16px !important;
-  }
-
-  .photo-center-text h1 {
-    font-size: 32px !important;
-  }
-
-  .photo-quote-btn {
-    padding: 16px 32px !important;
-    font-size: 16px !important;
-  }
 }
 
 
@@ -1551,63 +1366,6 @@
   .about-team-member p {
     font-size: 15px !important;
     line-height: 1.5 !important;
-  }
-
-  /* Photo Animation Section */
-  .photo-animation-section {
-    padding: 50px 16px !important;
-    min-height: auto !important;
-  }
-
-  .photo-grid-container {
-    min-height: auto !important;
-    padding: 20px 0 !important;
-  }
-
-  .photo-scatter-container {
-    position: relative !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: repeat(2, auto) !important;
-    gap: 10px !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    margin-bottom: 24px !important;
-  }
-
-  .photo-scatter-item {
-    position: relative !important;
-    width: 100% !important;
-    height: 140px !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    border-radius: 10px !important;
-  }
-
-  .photo-scatter-item:nth-child(n+5) {
-    display: none !important;
-  }
-
-  .photo-center-text {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    padding: 0 !important;
-  }
-
-  .photo-center-text h1 {
-    font-size: 22px !important;
-    margin-bottom: 16px !important;
-  }
-
-  .photo-quote-btn {
-    width: 100% !important;
-    padding: 12px 24px !important;
-    font-size: 14px !important;
-    min-height: 44px !important;
   }
 }
 

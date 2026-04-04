@@ -1,0 +1,98 @@
+/* ============================================
+   MOBILE & RESPONSIVE – site-wide (Cleaning-Project)
+   ============================================ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: clip;
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  max-width: 100%;
+  min-height: 100dvh;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  min-height: 100dvh;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* Media fluid */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Evită overflow pe text lung */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+td,
+th {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* iOS: font < 16px pe input provoacă zoom la focus */
+@media (max-width: 1024px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="password"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Butoane principale – zonă de apăsare confortabilă pe touch */
+@media (max-width: 1024px) {
+  .photo-quote-btn,
+  .news-retry-btn,
+  .retry-btn,
+  .view-all-services-btn,
+  .nav-link-btn,
+  .cta-button-albadoe,
+  .pricing-toggle-btn {
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+
+  .navbar {
+    padding-left: max(12px, env(safe-area-inset-left)) !important;
+    padding-right: max(12px, env(safe-area-inset-right)) !important;
+  }
+}
+
+/* Telefoane foarte înguste */
+@media (max-width: 380px) {
+  html {
+    font-size: 15px;
+  }
+}

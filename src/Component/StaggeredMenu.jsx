@@ -43,7 +43,6 @@ export const StaggeredMenu = () => {
     { label: 'About', ariaLabel: 'Go to About page', link: '/about' },
     { label: 'Services', ariaLabel: 'Go to Services page', link: '/servicii' },
     { label: 'Prices', ariaLabel: 'Go to Prices page', link: '/pret' },
-    { label: 'News', ariaLabel: 'Go to News page', link: '/newslist' },
     { label: 'Contact', ariaLabel: 'Go to Contact page', link: '/contacte' }
   ];
 
@@ -184,6 +183,7 @@ export const StaggeredMenu = () => {
 
     openTlRef.current = tl;
     return tl;
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- position drives layout
   }, [position]);
 
   const playOpen = useCallback(() => {
@@ -237,18 +237,18 @@ export const StaggeredMenu = () => {
     });
   }, [position]);
 
-  const animateIcon = useCallback((opening) => {
+  const animateIcon = useCallback(() => {
     const icon = iconRef.current;
     if (!icon) return;
     // Hamburger animation is handled by CSS classes
   }, []);
 
   const animateColor = useCallback(
-    (opening) => {
+    (isOpening) => {
       const btn = toggleBtnRef.current;
       if (!btn) return;
       colorTweenRef.current?.kill();
-      const targetColor = opening ? openMenuButtonColor : menuButtonColor;
+      const targetColor = isOpening ? openMenuButtonColor : menuButtonColor;
       colorTweenRef.current = gsap.to(btn, {
         color: targetColor,
         delay: 0.18,
@@ -265,10 +265,6 @@ export const StaggeredMenu = () => {
       gsap.set(toggleBtnRef.current, { color: targetColor });
     }
   }, [menuButtonColor, openMenuButtonColor]);
-
-  const animateText = useCallback((opening) => {
-    // Text animation removed - using hamburger icon only
-  }, []);
 
   const toggleMenu = useCallback(() => {
     const target = !openRef.current;

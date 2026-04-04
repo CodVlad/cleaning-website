@@ -12,7 +12,7 @@ import ScrollToTop from "./Component/ScrollToTop";
 function App() {
 
   return (
-    <>
+    <div className="app-shell">
       <Router>
         <ScrollToTop />
       <Routes>
@@ -20,11 +20,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contacte" element={<Contacte/>}/>
         <Route path="/newslist" element={<NewsList/>}/>
+        <Route path="/blog" element={<NewsList/>}/>
         <Route path="/servicii" element={<Servicii/>}/>
         <Route path="/pret" element={<Pret/>}/>
       </Routes>
     </Router>
-    </>
+    </div>
   )
 }
 
